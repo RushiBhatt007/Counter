@@ -1,0 +1,47 @@
+|counter
+C => C.IN1
+M => x1.IN0
+M => x2.IN0
+M => x3.IN0
+O[0] <= T_FF:t1.port2
+O[1] <= T_FF:t2.port2
+O[2] <= T_FF:t3.port2
+O[3] <= T_FF:t4.port2
+
+
+|counter|T_FF:t1
+T => n2.IN0
+T => n3.IN0
+C => n1.IN0
+C => n2.IN1
+C => n3.IN1
+Q <= n8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|T_FF:t2
+T => n2.IN0
+T => n3.IN0
+C => n1.IN0
+C => n2.IN1
+C => n3.IN1
+Q <= n8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|T_FF:t3
+T => n2.IN0
+T => n3.IN0
+C => n1.IN0
+C => n2.IN1
+C => n3.IN1
+Q <= n8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|T_FF:t4
+T => n2.IN0
+T => n3.IN0
+C => n1.IN0
+C => n2.IN1
+C => n3.IN1
+Q <= n8.DB_MAX_OUTPUT_PORT_TYPE
+
+

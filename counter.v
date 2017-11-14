@@ -1,6 +1,7 @@
-module counter(C,M,O);
-input C,M;
-output [3:0]O;
+module counter(C,M,R,P);
+input C,M,R;
+output [3:0]P;
+wire [3:0]O,S;
 reg T;
 always T=1;
 wire x,y,z;
@@ -11,6 +12,11 @@ xor x2(y,O[1],M);
 T_FF t3(T,y,O[2]);
 xor x3(z,O[2],M);
 T_FF t4(T,z,O[3]);
+not x4(S,R);
+assign P[0]=S&O[0];
+assign P[1]=S&O[1];
+assign P[2]=S&O[2];
+assign P[3]=S&O[3];
 endmodule
 
 module T_FF(T,C,Q);
